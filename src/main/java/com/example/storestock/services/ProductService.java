@@ -19,4 +19,14 @@ public class ProductService {
     public void save(Product product) {
         productRepository.save(product);
     }
+    public void deleteProduct(Long id) {
+        productRepository.deleteById(id);
+    }
+    public void updateStock(Long productId, int newStock) {
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new RuntimeException("Product not found with id " + productId));
+
+        product.setStock(newStock);
+        productRepository.save(product);
+    }
 }
