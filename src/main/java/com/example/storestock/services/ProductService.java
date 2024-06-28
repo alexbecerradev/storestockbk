@@ -29,4 +29,12 @@ public class ProductService {
         product.setStock(newStock);
         productRepository.save(product);
     }
+    public Product updateProduct(Long productId, Product updatedProduct) {
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new RuntimeException("Product not found with id " + productId));
+        product.setName(updatedProduct.getName());
+        product.setPrice(updatedProduct.getPrice());
+        product.setStock(updatedProduct.getStock());
+        return productRepository.save(product);
+    }
 }

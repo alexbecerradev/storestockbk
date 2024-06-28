@@ -33,4 +33,9 @@ public class ProductController {
         productService.updateStock(id, newStock);
         return ResponseEntity.noContent().build();
     }
+    @PutMapping("/{id}")
+    public ResponseEntity<Product> updateProduct(@PathVariable Long id, @RequestBody Product updatedProduct) {
+        Product product = productService.updateProduct(id, updatedProduct);
+        return ResponseEntity.ok(product);
+    }
 }
