@@ -21,5 +21,20 @@ Este proyecto es el backend de una aplicación para gestionar productos en una t
 3. Configura la conexión a la base de datos PostgreSQL en `application.properties`.
 4. Ejecuta la aplicación Spring Boot.
 
-## Estructura del Proyecto
+
+## API Endpoints
+
+- **GET /api/products:** Obtiene todos los productos.
+- **POST /api/products:** Crea un nuevo producto.
+- **PUT /api/products/{id}:** Actualiza un producto existente.
+- **DELETE /api/products/{id}:** Elimina un producto por su ID.
+
+## Contribución
+
+¡Las contribuciones son bienvenidas! Si deseas mejorar esta aplicación, por favor abre un issue o envía un pull request.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo LICENSE.
+
 
